@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WKC</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to bottom right, #1e3c72, #2a5298);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        footer {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 14px;
+            color: #ddd;
+        }
+
+        /* Welcome Page Styles */
+        .page-title {
+            font-size: 50px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #fff;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+
+        .form-container {
+            background: rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 15px;
+            padding: 30px;
+            width: 100%;
+            max-width: 400px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+
+        .form-container input {
+            width: calc(100% - 20px);
+            padding: 12px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            font-size: 16px;
+        }
+
+        .form-container button {
+            padding: 12px 20px;
+            background-color: #6c63ff;
+            color: #fff;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .form-container button:hover {
+            background-color: #4c47d3;
+            transform: scale(1.05);
+        }
+
+        /* Links Page Styles */
+        .links-container {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 450px;
+        }
+
+        .links-container a {
+            display: block;
+            background: #ff4081;
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 16px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .links-container a:hover {
+            background-color: #e3366c;
+            transform: scale(1.05);
+        }
+
+        h1, h2 {
+            margin-bottom: 15px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        }
+
+        h1 {
+            font-size: 32px;
+        }
+
+        h2 {
+            font-size: 24px;
+        }
+
+        #page2 {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <!-- Page 1 -->
+    <div id="page1">
+        <div class="page-title">Welcome to WKC</div>
+        <div class="form-container">
+            <form id="userForm">
+                <input type="text" id="firstName" placeholder="First Name" required />
+                <input type="text" id="lastName" placeholder="Last Name" required />
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        <footer>&copy; 2024 WKC Pvt. Ltd. All rights reserved.</footer>
+    </div>
+
+    <!-- Page 2 -->
+    <div id="page2">
+        <h1>Happy Links</h1>
+
+        <h2>Website Links</h2>
+        <div class="links-container">
+            <a href="https://www.pornhub.com/" target="_blank">P*HUB</a>
+            <a href="https://xhamster.com/" target="_blank">xhamster</a>
+            <a href="https://jav.guru/" target="_blank">Jav.Japan</a>
+            <a href="https://www.ukussa.net/" target="_blank">Ukussa</a>
+        </div>
+
+        <h2>Telegram Links</h2>
+        <div class="links-container">
+            <a href="https://t.me/sl_apaya" target="_blank">Apaaya</a>
+            <a href="https://t.me/massaofficialreturn" target="_blank">Massaa</a>
+            <a href="https://t.me/linmalleak" target="_blank">Lin Mal</a>
+            <a href="https://t.me/Jill_HUB_SL" target="_blank">Gill Hub</a>
+        </div>
+
+        <footer>&copy; 2024 Happy Links. All Rights Reserved.</footer>
+    </div>
+
+    <script>
+        const form = document.getElementById('userForm');
+        const page1 = document.getElementById('page1');
+        const page2 = document.getElementById('page2');
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const firstName = document.getElementById('firstName').value;
+            const lastName = document.getElementById('lastName').value;
+
+            alert(`Hello, ${firstName} ${lastName}! Welcome to the next page.`);
+            page1.style.display = 'none';
+            page2.style.display = 'flex';
+        });
+    </script>
+</body>
+</html>
